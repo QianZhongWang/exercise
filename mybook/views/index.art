@@ -15,8 +15,9 @@
 </head>
 <body>
     <div class="container">
-        <div class="title text-center"><h3 class="title">图书管理系统<a href="/toAddBook">添加图书</a></h3></div>
-        <div class="content">
+        <div class="title text-center"><h3 class="title">图书管理系统</h3></div>
+        <a href="/toAddBook" class="btn btn-default" role="button">添加图书</a>
+        <div style="margin-top:20px;" class="content">
             <table class="table table-bordered">
                 <thead>
                     <tr class="success text-center">
@@ -29,6 +30,7 @@
                 </thead>
                 <tbody>
                     {{each list}}
+                        {{if $value.status == 1}}
                         <tr class="text-center">
                             <td>{{$value.id}}</td>
                             <td>{{$value.name}}</td>
@@ -36,14 +38,20 @@
                             <td>{{$value.desc}}</td>
                         
                             <td><button class="btn btn-success btn-mini"><a href="/toEditBook?id={{$value.id}}">修改</a></button></td>
+
+        
                             <td><button class="btn btn-danger btn-mini">删除</button></td>
+
                         </tr>
+                        {{/if}}
                     {{/each}}
                     
                 </tbody>
             </table>    
         </div>
-
     </div>
 </body>
+<script>
+
+</script>
 </html>
