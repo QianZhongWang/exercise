@@ -38,7 +38,10 @@
                             <td>{{$value.desc}}</td>
                         
                             <td><button class="btn btn-success btn-mini"><a href="/toEditBook?id={{$value.id}}">修改</a></button></td>
-                            <td><button class="btn btn-danger btn-mini" onclick="delBook({{$value.id}},this)">删除</button></td>
+
+        
+                            <td><button class="btn btn-danger btn-mini">删除</button></td>
+
                         </tr>
                         {{/if}}
                     {{/each}}
@@ -46,13 +49,9 @@
                 </tbody>
             </table>    
         </div>
-<!--    <div  class="alert alert-success" role="alert">删除成功</div>   -->
     </div>
 </body>
 <script>
-function delBook(id,self){
-    $.post("/delBook", { 'id':id } )
-    $(self).parent().parent().hide('slow')
-}
+
 </script>
 </html>
