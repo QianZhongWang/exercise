@@ -36,7 +36,7 @@
                             <td>{{$value.desc}}</td>
                         
                             <td><button class="btn btn-success btn-mini"><a href="/toEditBook?id={{$value.id}}">修改</a></button></td>
-                            <td><button class="btn btn-danger btn-mini"><a删除</button></td>
+                            <td><button class="btn btn-danger btn-mini">删除</button></td>
                         </tr>
                     {{/each}}
                     
