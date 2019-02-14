@@ -21,7 +21,23 @@ mongoose.connection.on("disconnected",function(){
 })
 
 router.get("/",(req,res,next)=>{
-   res.send('hello good list')
+   Goods.find({},(err,data)=>{
+       if(err){
+           res.json({
+               status:'1',
+               msg:err.message
+            })
+       }else{
+           res.json({
+               status:'0',
+               msg:'',
+               result:{
+                   count:data.length,
+                   list:data
+               }
+            })
+       }
+   })
 
 })
 
