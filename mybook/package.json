@@ -1,0 +1,17 @@
+{
+  "name": "mybook",
+  "version": "1.0.0",
+  "description": "图书管理系统",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "QianZW",
+  "license": "ISC",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-art-template": "^1.0.1"
+  }
+}
