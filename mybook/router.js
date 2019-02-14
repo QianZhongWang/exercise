@@ -17,5 +17,6 @@ router.post('/addBook',service.addBook)
 router.get('/toEditBook',service.toEditBook)
 //编辑提交图书
 router.post('/editbook',service.editBook)
-
+//删除图书
+router.post('/delBook',service.delBook)
 module.exports = router;
